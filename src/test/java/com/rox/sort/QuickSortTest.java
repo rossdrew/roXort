@@ -54,8 +54,20 @@ public class QuickSortTest {
     }
 
     @Test
-    public void testSortMultipleUnsortedComparableList(){
+    public void testSortUnsortedComparableListWithHighPivot(){
         Comparable[] list = new Comparable[] {42, 1, 100};
+        Comparable[] result = sort.sort(list);
+
+        System.out.println(Arrays.toString(result));
+
+        assertEquals(1, result[0]);
+        assertEquals(42, result[1]);
+        assertEquals(100, result[2]);
+    }
+
+    @Test
+    public void testSortUnsortedComparableListWithLowPivot(){
+        Comparable[] list = new Comparable[] {42, 100, 1};
         Comparable[] result = sort.sort(list);
 
         System.out.println(Arrays.toString(result));
