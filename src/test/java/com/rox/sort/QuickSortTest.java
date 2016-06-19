@@ -6,9 +6,6 @@ import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
 
-/**
- * Created by Ross on 19/06/2016.
- */
 public class QuickSortTest {
     private QuickSort sort;
 
