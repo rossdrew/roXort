@@ -1,6 +1,6 @@
 #roXort
 
-This is planned to contain sorting algorithms, written in a purer TDD fashion...hopefully
+This is planned to contain sorting algorithms, firstly to refresh my memory of such things and secondly to try develop in a purer TDD fashion.
 
 #### Currently
 
