@@ -17,12 +17,22 @@ public class QuickSort {
         }
 
         int pivot = sortAroundPivot(list, listSize - 1);
+        sortLeft(list, pivot);
+        sortRight(list, pivot);
+    }
 
+    private void sortRight(Comparable[] list, int pivot) {
+        Comparable[] right = new Comparable[list.length - (pivot+1)];
+        System.arraycopy(list, pivot+1, right, 0, right.length);
+        quickSort(right);
+        System.arraycopy(right, 0, list, pivot+1, right.length);
+    }
+
+    private void sortLeft(Comparable[] list, int pivot) {
         Comparable[] left = new Comparable[pivot];
         System.arraycopy(list, 0, left, 0, pivot);
         quickSort(left);
         System.arraycopy(left, 0, list, 0, left.length);
-
     }
 
     /**
