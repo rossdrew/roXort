@@ -31,13 +31,12 @@ public class QuickSort implements Sorter {
     }
 
     private void quickSort(Comparable[] list) {
-        int listSize = list.length;
-
-        if (listSize < 2){
+        if (list.length < 2){
             return;
         }
 
         int pivot = sortAroundPivot(list, selectPivotPoint(list));
+
         sortLeft(list, pivot);
         sortRight(list, pivot);
     }
