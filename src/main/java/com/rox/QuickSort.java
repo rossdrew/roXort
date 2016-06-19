@@ -21,6 +21,10 @@ package com.rox;
  * @author Ross W. Drew
  */
 public class QuickSort {
+    public enum PivotSelection {LOMUTO};
+
+    private PivotSelection pivotSelection = PivotSelection.LOMUTO;
+
     public Comparable[] sort(Comparable[] list) {
         quickSort(list);
         return list;
@@ -33,9 +37,17 @@ public class QuickSort {
             return;
         }
 
-        int pivot = sortAroundPivot(list, listSize - 1);
+        int pivot = sortAroundPivot(list, selectPivotPoint(list));
         sortLeft(list, pivot);
         sortRight(list, pivot);
+    }
+
+    private int selectPivotPoint(Comparable[] list){
+        switch (pivotSelection){
+            case LOMUTO:
+            default:
+                return list.length - 1;
+        }
     }
 
     /**
