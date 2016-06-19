@@ -10,12 +10,12 @@ This is planned to contain sorting algorithms, firstly to refresh my memory of s
 
 | Algorithm     | Best Performance| Avg     |  Worst  |
 | ------------- |:---------------:| -------:|---------:
-| QuickSort     | __n__ log __n__ (var __n__) | __n__ log __n__ | __n__<sup>2</sup> |
+| [Quick Sort](https://github.com/rossdrew/roXort/blob/master/src/main/java/com/rox/sort/QuickSort.java)    | __n__ log __n__ (var __n__) | __n__ log __n__ | __n__<sup>2</sup> |
+| [Bubble Sort](https://github.com/rossdrew/roXort/blob/master/src/main/java/com/rox/sort/BubbleSort.java)   | __n__ log __n__ | __n__ log __n__ | __n__ log __n__ |
 
 #### Next up
 
  - Merge Sort
  - Heap Sort
- - Bubble Sort
  - [Others](https://en.wikipedia.org/wiki/Sorting_algorithm) and [Others Still](http://sorting.at/)
 
