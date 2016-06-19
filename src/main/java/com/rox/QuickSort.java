@@ -21,6 +21,9 @@ public class QuickSort {
         sortRight(list, pivot);
     }
 
+    /**
+     * Split array into right-of-pivot and sort
+     */
     private void sortRight(Comparable[] list, int pivot) {
         Comparable[] right = new Comparable[list.length - (pivot+1)];
         System.arraycopy(list, pivot+1, right, 0, right.length);
@@ -28,6 +31,9 @@ public class QuickSort {
         System.arraycopy(right, 0, list, pivot+1, right.length);
     }
 
+    /**
+     * Split array into left-of-pivot and sort
+     */
     private void sortLeft(Comparable[] list, int pivot) {
         Comparable[] left = new Comparable[pivot];
         System.arraycopy(list, 0, left, 0, pivot);

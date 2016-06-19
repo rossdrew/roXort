@@ -4,8 +4,6 @@ import com.rox.QuickSort;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.Arrays;
-
 import static junit.framework.TestCase.assertEquals;
 
 /**
@@ -58,8 +56,6 @@ public class QuickSortTest {
         Comparable[] list = new Comparable[] {42, 1, 100};
         Comparable[] result = sort.sort(list);
 
-        System.out.println(Arrays.toString(result));
-
         assertEquals(1, result[0]);
         assertEquals(42, result[1]);
         assertEquals(100, result[2]);
@@ -70,10 +66,44 @@ public class QuickSortTest {
         Comparable[] list = new Comparable[] {42, 100, 1};
         Comparable[] result = sort.sort(list);
 
-        System.out.println(Arrays.toString(result));
-
         assertEquals(1, result[0]);
         assertEquals(42, result[1]);
         assertEquals(100, result[2]);
+    }
+
+    @Test
+    public void testSortReversedList(){
+        Comparable[] list = new Comparable[] {10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
+        Comparable[] result = sort.sort(list);
+
+        assertEquals(0, result[0]);
+        assertEquals(1, result[1]);
+        assertEquals(2, result[2]);
+        assertEquals(3, result[3]);
+        assertEquals(4, result[4]);
+        assertEquals(5, result[5]);
+        assertEquals(6, result[6]);
+        assertEquals(7, result[7]);
+        assertEquals(8, result[8]);
+        assertEquals(9, result[9]);
+        assertEquals(10, result[10]);
+    }
+
+    @Test
+    public void testSortRandomList(){
+        Comparable[] list = new Comparable[] {7, 4, 8, 10, 6, 5, 9, 0, 2, 1, 3};
+        Comparable[] result = sort.sort(list);
+
+        assertEquals(0, result[0]);
+        assertEquals(1, result[1]);
+        assertEquals(2, result[2]);
+        assertEquals(3, result[3]);
+        assertEquals(4, result[4]);
+        assertEquals(5, result[5]);
+        assertEquals(6, result[6]);
+        assertEquals(7, result[7]);
+        assertEquals(8, result[8]);
+        assertEquals(9, result[9]);
+        assertEquals(10, result[10]);
     }
 }
