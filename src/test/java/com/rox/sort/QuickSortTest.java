@@ -76,34 +76,45 @@ public class QuickSortTest {
         Comparable[] list = new Comparable[] {10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
         Comparable[] result = sort.sort(list);
 
-        assertEquals(0, result[0]);
-        assertEquals(1, result[1]);
-        assertEquals(2, result[2]);
-        assertEquals(3, result[3]);
-        assertEquals(4, result[4]);
-        assertEquals(5, result[5]);
-        assertEquals(6, result[6]);
-        assertEquals(7, result[7]);
-        assertEquals(8, result[8]);
-        assertEquals(9, result[9]);
-        assertEquals(10, result[10]);
+        int i = 0;
+        assertEquals(0, result[i++]);
+        assertEquals(1, result[i++]);
+        assertEquals(2, result[i++]);
+        assertEquals(3, result[i++]);
+        assertEquals(4, result[i++]);
+        assertEquals(5, result[i++]);
+        assertEquals(6, result[i++]);
+        assertEquals(7, result[i++]);
+        assertEquals(8, result[i++]);
+        assertEquals(9, result[i++]);
+        assertEquals(10, result[i++]);
     }
 
     @Test
     public void testSortRandomList(){
-        Comparable[] list = new Comparable[] {7, 4, 8, 10, 6, 5, 9, 0, 2, 1, 3};
+        Comparable[] list = new Comparable[] {7, 4, 8, 10, 6};
         Comparable[] result = sort.sort(list);
 
-        assertEquals(0, result[0]);
-        assertEquals(1, result[1]);
-        assertEquals(2, result[2]);
-        assertEquals(3, result[3]);
-        assertEquals(4, result[4]);
-        assertEquals(5, result[5]);
-        assertEquals(6, result[6]);
-        assertEquals(7, result[7]);
-        assertEquals(8, result[8]);
-        assertEquals(9, result[9]);
-        assertEquals(10, result[10]);
+        int i = 0;
+        assertEquals(4, result[i++]);
+        assertEquals(6, result[i++]);
+        assertEquals(7, result[i++]);
+        assertEquals(8, result[i++]);
+        assertEquals(10, result[i++]);
+    }
+
+    @Test
+    public void testSortWithDuplicates(){
+        Comparable[] list = new Comparable[] {7, 7, 3, 4, 3, 1, 7};
+        Comparable[] result = sort.sort(list);
+
+        int i = 0;
+        assertEquals(1, result[i++]);
+        assertEquals(3, result[i++]);
+        assertEquals(3, result[i++]);
+        assertEquals(4, result[i++]);
+        assertEquals(7, result[i++]);
+        assertEquals(7, result[i++]);
+        assertEquals(7, result[i++]);
     }
 }

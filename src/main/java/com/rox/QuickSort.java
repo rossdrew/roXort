@@ -1,7 +1,24 @@
 package com.rox;
 
 /**
- * Created by Ross on 19/06/2016.
+ * QuickSort
+ * Sort an array of elements by splitting into sub arrays of
+ * items higher and lower than a pivot point, i.e.
+ *
+ * 1. Pick a pivot
+ * 2. Sort lower items to left, higher to right
+ * 3. Create two arrays from either side and recursively sort
+ *
+ * Pivot Selection
+ * Currently using the 'Lomuto partition scheme' pivot selection method,
+ * in that the pivot is always the last element in the array
+ *
+ * XXX Other Methods to look at and improve performance on sorted or fully equal lists
+ * - Hoare partition scheme
+ * - Random pivot
+ * - Middle pivot
+ *
+ * @author Ross W. Drew
  */
 public class QuickSort {
     public Comparable[] sort(Comparable[] list) {
@@ -44,18 +61,30 @@ public class QuickSort {
     /**
      * Sort array to have items greater than that at the pivot to it's right
      *
+     * XXX Probably a nicer way to do this than two loops
+     *
      * @param list to be sorted
      * @param pivot point, usually rightmost element
      * @return location in array where pivot now resides
      */
     private int sortAroundPivot(Comparable[] list, int pivot) {
-        if (list[0].compareTo(list[pivot]) > 0){
-            Comparable tmp = list[pivot];
-            list[pivot] = list[0];
-            list[0] = tmp;
-            return 0;
+        Comparable[] newList = new Comparable[list.length];
+
+        int leftIndex = newList.length-1;
+        int rightIndex = 0;
+
+        for (int i=0; i< list.length; i++){
+            if (list[i].compareTo(list[pivot]) >= 0){
+                newList[leftIndex--] = list[i];
+            }else{
+                newList[rightIndex++] = list[i];
+            }
         }
 
-        return pivot;
+        for (int i=0; i< list.length; i++){
+            list[i] = newList[i];
+        }
+
+        return rightIndex;
     }
 }
