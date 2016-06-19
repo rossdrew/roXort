@@ -1,4 +1,4 @@
-package com.rox;
+package com.rox.sort;
 
 /**
  * QuickSort
@@ -20,7 +20,7 @@ package com.rox;
  *
  * @author Ross W. Drew
  */
-public class QuickSort {
+public class QuickSort implements Sorter {
     public enum PivotSelection {LOMUTO};
 
     private PivotSelection pivotSelection = PivotSelection.LOMUTO;
