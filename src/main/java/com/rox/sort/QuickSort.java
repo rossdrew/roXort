@@ -2,6 +2,7 @@ package com.rox.sort;
 
 /**
  * QuickSort
+ * 
  * Sort an array of elements by splitting into sub arrays of
  * items higher and lower than a pivot point, i.e.
  *
