@@ -5,6 +5,8 @@ import org.junit.Test;
 import static junit.framework.TestCase.assertEquals;
 
 /**
+ * Common tests which apply to anything extending the {@link Sorter Sorter} interface.
+ *
  * @Author Ross W. Drew
  */
 public abstract class SorterTest {

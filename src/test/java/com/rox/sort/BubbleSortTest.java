@@ -3,8 +3,6 @@ package com.rox.sort;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.TestCase.assertEquals;
-
 /**
  * @Author Ross W. Drew
  */

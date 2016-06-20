@@ -8,7 +8,7 @@ package com.rox.sort;
  *
  * 1. Pick a pivot
  * 2. Sort lower items to left, higher to right
- * 3. Create two arrays from either side and recursively sort
+ * 3. Create two arrays from either side and recursively sort in the same way
  *
  * Pivot Selection
  * Currently using the 'Lomuto partition scheme' pivot selection method,
@@ -22,7 +22,7 @@ package com.rox.sort;
  * @author Ross W. Drew
  */
 public class QuickSort implements Sorter {
-    public enum PivotSelection {LOMUTO};
+    public enum PivotSelection {LOMUTO}
 
     private PivotSelection pivotSelection = PivotSelection.LOMUTO;
 
