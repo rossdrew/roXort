@@ -2,8 +2,6 @@ package com.rox.sort;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.fail;
 

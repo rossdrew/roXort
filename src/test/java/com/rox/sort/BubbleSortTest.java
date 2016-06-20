@@ -3,9 +3,6 @@ package com.rox.sort;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * @Author Ross W. Drew
- */
 public class BubbleSortTest extends SorterTest {
     private BubbleSort sort;
 
