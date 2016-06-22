@@ -1,10 +1,7 @@
 package com.rox.sort;
 
-import java.util.Arrays;
-
 /**
- * @Author rossdrew
- * @Created 22/06/16.
+ * @Author Ross W. Drew
  */
 public class Heap {
     private Comparable[] heap;
@@ -17,11 +14,7 @@ public class Heap {
     public Heap(){
         heap = new Comparable[0];
     }
-//13,14,15,18
-//18,15,14,13
-//    15              18
-//  13 14    ->     15  14
-//                 13
+
     public void insert(Comparable item) {
         Comparable[] newHeap = new Comparable[heap.length + 1];
 
