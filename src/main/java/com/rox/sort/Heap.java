@@ -1,6 +1,8 @@
 package com.rox.sort;
 
 /**
+ * Array based heap structure
+ *
  * @Author Ross W. Drew
  */
 public class Heap {
@@ -8,13 +10,17 @@ public class Heap {
 
     public Heap(Comparable[] data){
         heap = new Comparable[data.length];
-
     }
 
     public Heap(){
         heap = new Comparable[0];
     }
 
+    /**
+     * Insert an item to this heap
+     *
+     * @param item to be inserted into heap
+     */
     public void insert(Comparable item) {
         Comparable[] newHeap = new Comparable[heap.length + 1];
 
@@ -56,7 +62,7 @@ public class Heap {
     }
 
     /**
-     * Get parent index of child in binary tree
+     * Get expected parent index of child in binary tree
      *
      * @param child index to find parent of
      * @return parent index in binary tree array
