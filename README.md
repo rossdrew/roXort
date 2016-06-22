@@ -1,5 +1,5 @@
-[![Build Status](https://travis-ci.org/rossdrew/roXort.svg?branch=master)](https://travis-ci.org/rossdrew/roXort)
-[![codecov](https://codecov.io/gh/rossdrew/roXort/branch/master/graph/badge.svg)](https://codecov.io/gh/rossdrew/roXort)
+ [![Build Status](https://travis-ci.org/rossdrew/roXort.svg?branch=master)](https://travis-ci.org/rossdrew/roXort) 
+ [![codecov](https://codecov.io/gh/rossdrew/roXort/branch/master/graph/badge.svg)](https://codecov.io/gh/rossdrew/roXort) 
 
 
 #roXort
