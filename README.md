@@ -22,5 +22,6 @@ This is planned to contain sorting algorithms, firstly to refresh my memory of s
 #### Pitest
 
  A mutation testing suite for Java.
- TODO: This causes a little problem with simple sorting as Pitest will detect errors in the logic of non-stable algorithms.  In that if any item is compared with another of equal value both `a<b` and `v<=b` are valid and this is one of Pitests mutations.  I'll need to add tests to validate the stability of algorithms using objects other than integers in order to kill this mutation.
+ 
+ __TODO__: This causes a little problem with simple sorting as Pitest will detect errors in the logic of non-stable algorithms.  In that if any item is compared with another of equal value both `a<b` and `a<=b` are valid and this is one of Pitests mutations.  I'll need to add tests to validate the stability of algorithms using objects other than integers in order to kill this mutation.
 
