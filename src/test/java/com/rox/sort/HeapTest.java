@@ -17,6 +17,29 @@ public class HeapTest {
     }
 
     @Test
+    public void testSingleEntryHeapCreation(){
+        testHeap = new Heap(new Integer[] {13});
+
+        assertEquals(1, testHeap.getSize());
+        assertEquals(13, testHeap.getData()[0]);
+    }
+
+    @Test
+    public void testHeapCreation(){
+        testHeap = new Heap(new Integer[] {13,14,15,18,11,12,17,16});
+
+        assertEquals(8, testHeap.getSize());
+        assertEquals(18, testHeap.getData()[0]);
+        assertEquals(16, testHeap.getData()[1]);
+        assertEquals(17, testHeap.getData()[2]);
+        assertEquals(15, testHeap.getData()[3]);
+        assertEquals(11, testHeap.getData()[4]);
+        assertEquals(12, testHeap.getData()[5]);
+        assertEquals(14, testHeap.getData()[6]);
+        assertEquals(13, testHeap.getData()[7]);
+    }
+
+    @Test
     public void testFirstInsertion(){
         testHeap.insert(13);
 

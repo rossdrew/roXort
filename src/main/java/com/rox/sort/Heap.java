@@ -9,7 +9,10 @@ public class Heap {
     private Comparable[] heap;
 
     public Heap(Comparable[] data){
-        heap = new Comparable[data.length];
+        heap = new Comparable[0];
+        for (Comparable item : data){
+            insert(item);
+        }
     }
 
     public Heap(){
@@ -75,5 +78,9 @@ public class Heap {
         }
 
         return parentIndex;
+    }
+
+    public static int getIndexLocationOfLeftChild(int parent){
+        return (parent*2)+1;
     }
 }
