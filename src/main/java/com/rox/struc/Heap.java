@@ -1,4 +1,4 @@
-package com.rox.sort;
+package com.rox.struc;
 
 /**
  * Array based heap structure

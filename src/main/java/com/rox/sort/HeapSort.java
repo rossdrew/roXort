@@ -1,5 +1,7 @@
 package com.rox.sort;
 
+import com.rox.struc.Heap;
+
 /**
  * Heap Sort
  *

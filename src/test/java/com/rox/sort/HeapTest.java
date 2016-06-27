@@ -1,5 +1,6 @@
 package com.rox.sort;
 
+import com.rox.struc.Heap;
 import org.junit.Before;
 import org.junit.Test;
 
