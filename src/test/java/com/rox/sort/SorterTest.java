@@ -2,6 +2,8 @@ package com.rox.sort;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.fail;
 
@@ -49,7 +51,7 @@ public abstract class SorterTest {
     }
 
     @Test
-    public void testSortUnsortedComparableListWithHighPivot(){
+    public void testSortUnsortedComparableListWithHighestAtEnd(){
         Comparable[] list = new Comparable[] {42, 1, 100};
         Comparable[] result = getSorter().sort(list);
 
@@ -59,7 +61,7 @@ public abstract class SorterTest {
     }
 
     @Test
-    public void testSortUnsortedComparableListWithLowPivot(){
+    public void testSortUnsortedComparableListWithLowestAtEnd(){
         Comparable[] list = new Comparable[] {42, 100, 1};
         Comparable[] result = getSorter().sort(list);
 
@@ -104,6 +106,9 @@ public abstract class SorterTest {
     public void testSortWithDuplicates(){
         Comparable[] list = new Comparable[] {7, 7, 3, 4, 3, 1, 7};
         Comparable[] result = getSorter().sort(list);
+
+        /*DEBUG*/
+        System.out.println(Arrays.toString(result));
 
         int i = 0;
         assertEquals(1, result[i++]);
