@@ -17,6 +17,26 @@ public class HeapTest {
     }
 
     @Test
+    public void testIndexLocationOfLeftChild(){
+        assertEquals(3, Heap.getIndexLocationOfLeftChild(1));
+        assertEquals(5, Heap.getIndexLocationOfLeftChild(2));
+        assertEquals(7, Heap.getIndexLocationOfLeftChild(3));
+        assertEquals(9, Heap.getIndexLocationOfLeftChild(4));
+        assertEquals(49, Heap.getIndexLocationOfLeftChild(24));
+    }
+
+    @Test
+    public void testIndexLocationOfParent(){
+        assertEquals(0, Heap.getIndexLocationOfParent(0));
+        assertEquals(0, Heap.getIndexLocationOfParent(1));
+        assertEquals(0, Heap.getIndexLocationOfParent(2));
+        assertEquals(1, Heap.getIndexLocationOfParent(3));
+        assertEquals(1, Heap.getIndexLocationOfParent(4));
+        assertEquals(2, Heap.getIndexLocationOfParent(5));
+        assertEquals(16, Heap.getIndexLocationOfParent(34));
+    }
+
+    @Test
     public void testSingleEntryHeapCreation(){
         testHeap = new Heap(new Integer[] {13});
 
