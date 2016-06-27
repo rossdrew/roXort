@@ -71,13 +71,10 @@ public class Heap {
      * @return parent index in binary tree array
      */
     public static int getIndexLocationOfParent(int child){
-        int parentIndex = 0;
+        if (child < 3)
+            return 0;
 
-        if (child > 2){
-            parentIndex = child - ((child / 2)+1);
-        }
-
-        return parentIndex;
+        return (child - ((child / 2)+1));
     }
 
     public static int getIndexLocationOfLeftChild(int parent){

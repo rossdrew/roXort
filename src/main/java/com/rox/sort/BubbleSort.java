@@ -19,7 +19,7 @@ package com.rox.sort;
 public class BubbleSort implements Sorter {
     public Comparable[] sort(Comparable[] list) {
         for (int i=list.length-1; i>=0; i--){
-            if (executeBubblePass(list, i) == 0)
+            if (executeBubblePass(list, i) < 1)
                 break;
         }
 

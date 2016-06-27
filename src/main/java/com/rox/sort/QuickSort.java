@@ -46,7 +46,7 @@ public class QuickSort implements Sorter {
      * Select pivot point based on pivot selection method selected
      *
      * XXX For now this is only LOMUTO
-     * 
+     *
      * @param list from which to select a pivot
      * @return an index in the array to a chosen pivot point
      */
