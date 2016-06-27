@@ -12,7 +12,7 @@ This is planned to contain sorting algorithms, firstly to refresh my memory of s
 | ------------- |:---------------:| -------:|---------:
 | [Quick Sort](https://github.com/rossdrew/roXort/blob/master/src/main/java/com/rox/sort/QuickSort.java)    | __n__ log __n__ (var __n__) | __n__ log __n__ | __n__<sup>2</sup> |
 | [Bubble Sort](https://github.com/rossdrew/roXort/blob/master/src/main/java/com/rox/sort/BubbleSort.java)   | __n__ log __n__ | __n__ log __n__ | __n__ log __n__ |
-| Heap Sort (In Progress...)  |
+| [Heap Sort](https://github.com/rossdrew/roXort/blob/master/src/main/java/com/rox/sort/HeapSort.java)   | __n__ log __n__ | __n__ log __n__ | __n__ log __n__ |
 
 #### Next up
 
