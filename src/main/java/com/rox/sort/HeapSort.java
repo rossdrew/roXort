@@ -5,6 +5,15 @@ import com.rox.struc.Heap;
 /**
  * Heap Sort
  *
+ * Compile a {@link com.rox.struc.Heap Heap} data structure from the items to be sorted
+ * then continually use the top item (highest) and resort the heap.
+ *
+ * 1. Create a Heap
+ * 2. Swap the first (which will be the highest in heap) and last heap items.
+ *      - The last item in the structure is now sorted, the unsorted heap is one item smaller
+ * 3. Sift the now top heap item into it's ordered position in the heap
+ *      - It is a heap again
+ * 4. Do this until all items are sorted and there's no unsorted heap left
  *
  * @Author Ross W. Drew
  */

@@ -1,10 +1,13 @@
 package com.rox.sort;
 
+import junit.framework.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
 
+import static junit.framework.Assert.assertTrue;
 import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertSame;
 import static junit.framework.TestCase.fail;
 
 /**

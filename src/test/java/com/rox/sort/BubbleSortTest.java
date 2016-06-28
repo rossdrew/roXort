@@ -3,6 +3,8 @@ package com.rox.sort;
 import org.junit.Before;
 import org.junit.Test;
 
+import static junit.framework.TestCase.assertSame;
+
 public class BubbleSortTest extends SorterTest {
     private BubbleSort sort;
 
@@ -19,6 +21,15 @@ public class BubbleSortTest extends SorterTest {
 
     @Test
     public void testStablility(){
-        //TODO test if this is a stable implementation
+        Integer i1 = 43;
+        Integer i2 = 43;
+        Integer i3 = 42;
+
+        Comparable[] list = new Comparable[] {i1, i2, i3};
+        Comparable[] result = getSorter().sort(list);
+
+        assertSame(i3, result[0]);
+        assertSame(i1, result[1]);
+        assertSame(i2, result[2]);
     }
 }
