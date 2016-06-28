@@ -110,9 +110,6 @@ public abstract class SorterTest {
         Comparable[] list = new Comparable[] {7, 7, 3, 4, 3, 1, 7};
         Comparable[] result = getSorter().sort(list);
 
-        /*DEBUG*/
-        System.out.println(Arrays.toString(result));
-
         int i = 0;
         assertEquals(1, result[i++]);
         assertEquals(3, result[i++]);
