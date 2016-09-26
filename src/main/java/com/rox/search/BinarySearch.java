@@ -29,7 +29,7 @@ public class BinarySearch {
         int guessResult = searchSpace[guess].compareTo(searchTerm);
 
         //System.out.println(">> Search Cycle of '" + Arrays.toString(searchSpace) + "':\n\t[" + start + "-" + end + "] guess: " + guess + " = " + guessResult);
-        
+
         if (guessResult == 0)
             return guess;
         else if (start == end)

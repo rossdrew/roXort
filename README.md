@@ -4,9 +4,11 @@
 
 #roXort
 
-This is planned to contain sorting algorithms, firstly to refresh my memory of such things and secondly to try develop in a purer TDD fashion.
+This was planned to contain sorting algorithms, firstly to refresh my memory of such things and secondly to try develop in a purer TDD fashion.
 
-#### Currently
+It has since started to expand into searching algorithms as well
+
+#### Current Sort Algorithms
 
 | Algorithm     | Best Performance| Avg     |  Worst  |
 | ------------- |:---------------:| -------:|---------:
@@ -14,10 +16,18 @@ This is planned to contain sorting algorithms, firstly to refresh my memory of s
 | [Bubble Sort](https://github.com/rossdrew/roXort/blob/master/src/main/java/com/rox/sort/BubbleSort.java)   | __n__ log __n__ | __n__ log __n__ | __n__ log __n__ |
 | [Heap Sort](https://github.com/rossdrew/roXort/blob/master/src/main/java/com/rox/sort/HeapSort.java)   | __n__ log __n__ | __n__ log __n__ | __n__ log __n__ |
 
+#### Current Search Algorithms
+
+| Algorithm     | Best Performance| Avg     |  Worst  |
+| ------------- |:---------------:| -------:|---------:
+| [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm)    | 1 | log __n__ | log __n__ |
+
+
 #### Next up
 
  - Merge Sort
  - [Others](https://en.wikipedia.org/wiki/Sorting_algorithm) and [Others Still](http://sorting.at/)
+ - Hashing/Linear/Digital searches
  
 #### Pitest
 
