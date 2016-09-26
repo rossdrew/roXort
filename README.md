@@ -20,6 +20,7 @@ It has since started to expand into searching algorithms as well
 
 | Algorithm     | Best Performance| Avg     |  Worst  |
 | ------------- |:---------------:| -------:|---------:
+| [Lineary Search](https://en.wikipedia.org/wiki/Linear_search)    | 1 | __n__ | __n__ |
 | [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm)    | 1 | log __n__ | log __n__ |
 
 
@@ -27,7 +28,7 @@ It has since started to expand into searching algorithms as well
 
  - Merge Sort
  - [Others](https://en.wikipedia.org/wiki/Sorting_algorithm) and [Others Still](http://sorting.at/)
- - Hashing/Linear/Digital searches
+ - Hashing & Digital searches
  
 #### Pitest
 
