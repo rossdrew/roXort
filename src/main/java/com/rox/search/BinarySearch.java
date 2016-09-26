@@ -10,21 +10,21 @@ package com.rox.search;
  *
  * @Author Ross W. Drew
  */
-public class BinarySearch {
+public class BinarySearch implements Searcher{
     private Comparable[] searchSpace;
 
     public BinarySearch(Comparable[] items){
         searchSpace = items;
     }
 
-    public int find (Comparable searchTerm){
+    public int search(Comparable searchTerm){
         if (searchSpace.length < 1)
             return -1;
 
-        return find(searchTerm, 0, searchSpace.length - 1);
+        return binarySearch(searchTerm, 0, searchSpace.length - 1);
     }
 
-    private int find(Comparable searchTerm, int start, int end) {
+    private int binarySearch(Comparable searchTerm, int start, int end) {
         int guess = middleOfRange(start, end);
         int guessResult = searchSpace[guess].compareTo(searchTerm);
 
@@ -35,9 +35,9 @@ public class BinarySearch {
         else if (start == end)
             return -1;
         else if (guessResult < 0)
-            return find(searchTerm, guess+1, end);
+            return binarySearch(searchTerm, guess+1, end);
         else
-            return find(searchTerm, start, guess-1);
+            return binarySearch(searchTerm, start, guess-1);
     }
 
     private int middleOfRange(int from, int to){
