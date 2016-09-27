@@ -1,5 +1,13 @@
 package com.rox.search;
 
+/**
+ * Linear Search
+ *
+ * For completelness and comparing I present, the linear search.
+ *
+ * Step through the search space until we find what we are looking for.
+ * No order required or expected.
+ */
 public class LinearSearch implements Searcher {
     private Comparable[] searchSpace;
 

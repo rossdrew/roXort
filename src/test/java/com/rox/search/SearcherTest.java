@@ -50,8 +50,25 @@ public abstract class SearcherTest {
     }
 
     @Test
-    public void testNegitiveSearchOfMultipleItems(){
+    public void testNegiativeSearchOfMultipleItems(){
         Searcher search = getSearcher(new String[] {"A","B","C","D","E","F"});
         assertEquals(-1 ,search.search("Z"));
+    }
+
+    @Test
+    public void testNegiativeOutwithRange(){
+        Searcher search = getSearcher(new Integer[] {1,2,3,4,5});
+        assertEquals(-1 ,search.search(-1));
+        assertEquals(-1 ,search.search(-1000));
+        assertEquals(-1 ,search.search(6));
+        assertEquals(-1 ,search.search(6000));
+    }
+
+    @Test
+    public void testLargerSearchSpace(){
+        Searcher search = getSearcher(new Integer[] {1,2,3,4,5,6,7,8,9,10,20,30,40,50,60,70,80,90,100,200,300,400,401,405,456,532,541,1902});
+        assertEquals(0 ,search.search(1));
+        assertEquals(13 ,search.search(50));
+        assertEquals(-1 ,search.search(11));
     }
 }

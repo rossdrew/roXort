@@ -1,5 +1,9 @@
 package com.rox.search;
 
+import com.rox.sort.Sorter;
+
+import java.util.Arrays;
+
 /**
  * (Binary / Half Interval / Logarithmic) Search
  *
@@ -13,8 +17,8 @@ package com.rox.search;
 public class BinarySearch implements Searcher{
     private Comparable[] searchSpace;
 
-    public BinarySearch(Comparable[] items){
-        searchSpace = items;
+    public BinarySearch(Comparable[] sortedItems){
+        searchSpace = sortedItems;
     }
 
     public int search(Comparable searchTerm){
@@ -32,11 +36,11 @@ public class BinarySearch implements Searcher{
 
         if (guessResult == 0)
             return guess;
-        else if (start == end)
+        else if (start >= end)
             return -1;
-        else if (guessResult < 0)
+        else if (guessResult <= -1)
             return binarySearch(searchTerm, guess+1, end);
-        else
+        else // (guessResult >=  1)
             return binarySearch(searchTerm, start, guess-1);
     }
 
