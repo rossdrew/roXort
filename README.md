@@ -28,7 +28,7 @@ It has since started to expand into searching algorithms as well
 
  - Merge Sort
  - [Others](https://en.wikipedia.org/wiki/Sorting_algorithm) and [Others Still](http://sorting.at/)
- - Hashing & Digital searches
+ - [Hashing](http://interactivepython.org/runestone/static/pythonds/SortSearch/Hashing.html) & Digital searches
  
 #### Pitest
 
