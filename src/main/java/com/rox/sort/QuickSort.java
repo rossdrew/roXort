@@ -35,7 +35,7 @@ public class QuickSort implements Sorter {
             return;
         }
 
-        int pivot = sortAroundPivot(list, selectPivotPoint(list));
+        int pivot = lomutoPartition(list, selectPivotPoint(list));
 
         sortLeft(list, pivot);
         sortRight(list, pivot);
@@ -78,6 +78,8 @@ public class QuickSort implements Sorter {
     }
 
     /**
+     * Lomuto Partition Scheme
+     * -----------------------
      * Sort array to have items greater than that at the pivot to it's right
      *
      * XXX Probably a nicer way to do this than two loops
@@ -86,7 +88,7 @@ public class QuickSort implements Sorter {
      * @param pivot point, usually rightmost element
      * @return location in array where pivot now resides
      */
-    private int sortAroundPivot(Comparable[] list, int pivot) {
+    private int lomutoPartition(Comparable[] list, int pivot) {
         Comparable[] newList = new Comparable[list.length];
 
         int leftIndex = newList.length-1;
