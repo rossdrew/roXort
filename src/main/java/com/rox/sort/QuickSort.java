@@ -10,9 +10,8 @@ package com.rox.sort;
  * 2. Sort lower items to left, higher to right
  * 3. Create two arrays from either side and recursively sort in the same way
  *
- * Pivot Selection
- * Currently using the 'Lomuto partition scheme' pivot selection method,
- * in that the pivot is always the last element in the array
+ * Pivot Selection: the only option for now is that the pivot is always the last element in the array
+ * Partition Scheme: Currently only using the 'Lomuto partition scheme' method,
  *
  * XXX Other Methods to look at and improve performance on sorted or fully equal lists
  * - Hoare partition scheme
@@ -22,9 +21,9 @@ package com.rox.sort;
  * @author Ross W. Drew
  */
 public class QuickSort implements Sorter {
-    public enum PivotSelection {LOMUTO}
+    public enum PivotSelection {LAST_ITEM}
 
-    private PivotSelection pivotSelection = PivotSelection.LOMUTO;
+    private PivotSelection pivotSelection = PivotSelection.LAST_ITEM;
 
     public Comparable[] sort(Comparable[] list) {
         quickSort(list);
@@ -45,14 +44,14 @@ public class QuickSort implements Sorter {
     /**
      * Select pivot point based on pivot selection method selected
      *
-     * XXX For now this is only LOMUTO
+     * XXX For now this is only LAST_ITEM
      *
      * @param list from which to select a pivot
      * @return an index in the array to a chosen pivot point
      */
     private int selectPivotPoint(Comparable[] list){
         switch (pivotSelection){
-            case LOMUTO:
+            case LAST_ITEM:
             default:
                 return list.length - 1;
         }
