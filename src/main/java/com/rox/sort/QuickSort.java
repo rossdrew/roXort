@@ -31,6 +31,7 @@ public class QuickSort implements Sorter {
     }
 
     private void quickSort(Comparable[] list) {
+//        quickSort_lab(list, 0, list.length-1);
         if (list.length < 2){
             return;
         }
@@ -39,6 +40,34 @@ public class QuickSort implements Sorter {
 
         sortLeft(list, pivot);
         sortRight(list, pivot);
+    }
+
+    private void quickSort_lab(Comparable[] list, int low, int high){
+        if (low < high){
+            int p = quickSort_lab_partition(list, low, high);
+            quickSort_lab(list, low, p-1);
+            quickSort_lab(list, p + 1, high);
+        }
+    }
+
+    private int quickSort_lab_partition(Comparable[] list, int low, int high){
+        Comparable pivot = list[high];
+        int i = low;
+        for (int j = low; j < high; j++){
+            if (list[j].compareTo(pivot) <= 0){
+                list = swap(list,i,j);
+                i++;
+            }
+            list = swap(list,i,high);
+        }
+        return i;
+    }
+
+    private Comparable[] swap(Comparable[] list, int a, int b){
+        Comparable tmp = list[a];
+        list[a] = list[b];
+        list[b] = tmp;
+        return list;
     }
 
     /**
