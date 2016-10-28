@@ -6,7 +6,7 @@
 
 This was planned to contain sorting algorithms, firstly to refresh my memory of such things and secondly to try develop in a purer TDD fashion.
 
-It has since started to expand into searching algorithms as well
+It has since started to expand into searching and encrypting algorithms as well
 
 #### Current Sort Algorithms
 
@@ -23,6 +23,10 @@ It has since started to expand into searching algorithms as well
 | [Lineary Search](https://en.wikipedia.org/wiki/Linear_search)    | 1 | __n__ | __n__ |
 | [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm)    | 1 | log __n__ | log __n__ |
 
+
+#### Current Encryption Algorithms
+
+ - [Substitution Cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
 
 #### Next up
 
