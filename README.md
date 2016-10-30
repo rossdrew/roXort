@@ -27,6 +27,7 @@ It has since started to expand into searching and encrypting algorithms as well
 #### Current Encryption Algorithms
 
  - [Substitution Cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
+ - [Transposition Cipher](https://en.wikipedia.org/wiki/Transposition_cipher)
 
 #### Next up
 
