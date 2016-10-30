@@ -1,7 +1,11 @@
 package com.rox.encrypt;
 
 /**
- * An algorithmic substitutional cypher implementation, avoiding complex Java collections and whatnot.
+ * Substitution Cipher
+ *
+ * The plaintext is made up of a set of available characters which each have a
+ * substitution value.  For example, all occurrences of character 'A' will be
+ * replaced with the character 'Z' and so on
  *
  * @Author rossdrew
  */
