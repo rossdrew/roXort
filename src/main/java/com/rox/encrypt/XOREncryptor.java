@@ -1,8 +1,17 @@
 package com.rox.encrypt;
 
 /**
+ * XOR Cipher
+ * 
+ * Encrypt a given plaintext (P) using a given key (K) by applying XOR between each plaintext
+ * char (i) and a mod to a char in the key, selected using the modulus of the current
+ * plaintext index over the length of the key.  i.e.
+ *
+ *  C[i] = P[i] XOR K[i MOD len(K)]
+ *
+ *  This is symmetrical. So the key will also decrypt in the exact same way as it encrypts.
+ *
  * @Author rossdrew
- * @Created 02/11/16.
  */
 public class XOREncryptor {
     private char[] key = new char [0];
