@@ -40,5 +40,5 @@ It has since started to expand into searching and encrypting algorithms as well
 
  A mutation testing suite for Java.
  
- __TODO__: This causes a little problem with simple sorting as Pitest will detect errors in the logic of non-stable algorithms.  In that if any item is compared with another of equal value both `a<b` and `a<=b` are valid and this is one of Pitests mutations.  I'll need to add tests to validate the stability of algorithms using objects other than integers in order to kill this mutation.
+ __TODO__: This causes a little problem with simple sorting as Pitest will detect errors in the logic of non-stable sorting algorithms.  In that if any item is compared with another of equal value both `a<b` and `a<=b` are valid and this is one of Pitests mutations.  I'll need to add tests to validate the stability of algorithms using objects other than integers (for more complex equality) in order to kill this mutation.
 
