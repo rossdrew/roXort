@@ -31,7 +31,7 @@ public class SubstitutionEncryptor {
 
         for (char c : plaintext.toCharArray()){
             boolean found = false;
-            for (char[] sub : subs) {
+            for (char[] sub : subs) {  //XXX Pitest: "changed conditional boundary → SURVIVED"
                 if (sub[ALPH] == c) {
                     ciphertext += sub[CIPH];
                     found = true;

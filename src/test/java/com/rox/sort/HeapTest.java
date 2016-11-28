@@ -8,6 +8,10 @@ import static org.junit.Assert.assertEquals;
 
 /**
  * @Author Ross W. Drew
+ *
+ * XXX Needs to take into account sort stability or Pitest will always see the
+ *     untested stability of elements as a "changed conditional boundary → SURVIVED"
+ *
  */
 public class HeapTest {
     private Heap testHeap;

@@ -21,7 +21,7 @@ public class XORCipherTest {
         XOREncryptor decryptor = new XOREncryptor(key);
 
         assertThat(ciphertext, is(not(plaintext)));
-        assertThat(decryptor.encrypt(ciphertext), is(plaintext));
+        assertThat(decryptor.decrypt(ciphertext), is(plaintext));
     }
 
     @Test
@@ -34,6 +34,20 @@ public class XORCipherTest {
         XOREncryptor decryptor = new XOREncryptor(key);
 
         assertThat(ciphertext, is(not(plaintext)));
+        assertThat(decryptor.decrypt(ciphertext), is(plaintext));
+    }
+
+    @Test
+    public void testStringAndThatEncryptionIsSymmetrical(){
+        String plaintext = "This is my plaintext string";
+        String key = "MyTopSecretEncryptionKey";
+
+        XOREncryptor encryptor = new XOREncryptor(key);
+        String ciphertext = encryptor.encrypt(plaintext);
+        XOREncryptor decryptor = new XOREncryptor(key);
+
+        assertThat(ciphertext, is(not(plaintext)));
+        assertThat(decryptor.decrypt(ciphertext), is(plaintext));
         assertThat(decryptor.encrypt(ciphertext), is(plaintext));
     }
 
@@ -47,7 +61,7 @@ public class XORCipherTest {
         XOREncryptor decryptor = new XOREncryptor(key);
 
         assertThat("Need something to encode", ciphertext, is(plaintext));
-        assertThat(decryptor.encrypt(ciphertext), is(plaintext));
+        assertThat(decryptor.decrypt(ciphertext), is(plaintext));
     }
 
     @Test

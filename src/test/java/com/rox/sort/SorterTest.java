@@ -1,17 +1,15 @@
 package com.rox.sort;
 
-import junit.framework.Assert;
 import org.junit.Test;
-
 import java.util.Arrays;
-
-import static junit.framework.Assert.assertTrue;
 import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.assertSame;
 import static junit.framework.TestCase.fail;
 
 /**
  * Common tests which apply to anything extending the {@link Sorter Sorter} interface.
+ *
+ * XXX Needs to take into account sort stability or Pitest will always see the
+ *     untested stability of elements as a "changed conditional boundary → SURVIVED"
  *
  * @Author Ross W. Drew
  */
@@ -78,9 +76,6 @@ public abstract class SorterTest {
         Comparable[] list = new Comparable[] {10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0};
         Comparable[] result = getSorter().sort(list);
 
-        /*DEBUG*/
-        System.out.println(Arrays.toString(result));
-
         int i = 0;
         assertEquals(0, result[i++]);
         assertEquals(1, result[i++]);
@@ -93,6 +88,21 @@ public abstract class SorterTest {
         assertEquals(8, result[i++]);
         assertEquals(9, result[i++]);
         assertEquals(10, result[i++]);
+    }
+
+    @Test
+    public void testXXX(){
+        Comparable[] list = new Comparable[] {0,10,1};
+        Comparable[] result = getSorter().sort(list);
+
+        /*DEBUG*/
+        System.out.println(Arrays.toString(result));
+
+        int i = 0;
+        assertEquals(0, result[i++]);
+        assertEquals(1, result[i++]);
+        assertEquals(10, result[i++]);
+
     }
 
     @Test
