@@ -14,7 +14,7 @@ import java.util.Arrays;
  *
  * @Author Ross W. Drew
  */
-public class BinarySearch implements Searcher{
+public class BinarySearch<C extends Comparable> implements Searcher{
     private Comparable[] searchSpace;
 
     public BinarySearch(Comparable[] sortedItems){
@@ -31,8 +31,6 @@ public class BinarySearch implements Searcher{
     private int binarySearch(Comparable searchTerm, int start, int end) {
         int guess = middleOfRange(start, end);
         int guessResult = searchSpace[guess].compareTo(searchTerm);
-
-        //System.out.println(">> Search Cycle of '" + Arrays.toString(searchSpace) + "':\n\t[" + start + "-" + end + "] guess: " + guess + " = " + guessResult);
 
         if (guessResult == 0)
             return guess;
