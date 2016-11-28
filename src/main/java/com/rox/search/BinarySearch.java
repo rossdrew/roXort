@@ -14,7 +14,7 @@ import java.util.Arrays;
  *
  * @Author Ross W. Drew
  */
-public class BinarySearch<C extends Comparable> implements Searcher{
+public class BinarySearch implements Searcher{
     private Comparable[] searchSpace;
 
     public BinarySearch(Comparable[] sortedItems){
