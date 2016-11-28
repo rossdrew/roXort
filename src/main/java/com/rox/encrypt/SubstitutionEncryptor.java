@@ -7,7 +7,7 @@ package com.rox.encrypt;
  * substitution value.  For example, all occurrences of character 'A' will be
  * replaced with the character 'Z' and so on
  *
- * @Author rossdrew
+ * @author rossdrew
  */
 public class SubstitutionEncryptor {
     private final int ALPH = 0;
@@ -31,9 +31,9 @@ public class SubstitutionEncryptor {
 
         for (char c : plaintext.toCharArray()){
             boolean found = false;
-            for (int i=0; i<subs.length; i++){
-                if (subs[i][ALPH] == c) {
-                    ciphertext += subs[i][CIPH];
+            for (char[] sub : subs) {
+                if (sub[ALPH] == c) {
+                    ciphertext += sub[CIPH];
                     found = true;
                     break;
                 }

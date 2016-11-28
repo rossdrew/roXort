@@ -7,26 +7,26 @@ package com.rox.encrypt;
  * Substitute any given character in the plaintext for one that is n steps
  * along the list of available character.
  *
- * @Author rossdrew
+ * @author rossdrew
  */
 public class TranspositionEncryptor {
-    private char[] alphabet;
+    private final char[] alphabet;
 
     public TranspositionEncryptor(String alphabet) {
         this.alphabet = alphabet.toCharArray();
     }
 
-    public String encrypt(String plantext, int increments) throws IllegalArgumentException {
+    public String encrypt(String plaintext, int increments) throws IllegalArgumentException {
         String ciphertext = "";
 
-        for (int p=0; p < plantext.length(); p++){
-            char plaintextChar = plantext.charAt(p);
+        for (int p=0; p < plaintext.length(); p++){
+            char plaintextChar = plaintext.charAt(p);
             boolean found = false;
 
             for (int k=0; k < alphabet.length; k++){
                 if (plaintextChar == alphabet[k]){
-                    int cyphertextCharIndex = (k + increments) % alphabet.length;
-                    ciphertext += alphabet[cyphertextCharIndex];
+                    int ciphertextCharIndex = (k + increments) % alphabet.length;
+                    ciphertext += alphabet[ciphertextCharIndex];
                     found = true;
                 }
             }

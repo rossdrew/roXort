@@ -11,7 +11,7 @@ package com.rox.search;
  * @author Ross W. Drew
  */
 public class BinarySearch<ComparableSearchTarget extends Comparable<ComparableSearchTarget>> implements Searcher<ComparableSearchTarget>{
-    private ComparableSearchTarget[] searchSpace;
+    private final ComparableSearchTarget[] searchSpace;
 
     public BinarySearch(ComparableSearchTarget[] sortedItems){
         searchSpace = sortedItems;

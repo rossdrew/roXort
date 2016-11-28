@@ -3,13 +3,13 @@ package com.rox.search;
 /**
  * Linear Search
  *
- * For completelness and comparing I present, the linear search.
+ * For completeness and comparing I present, the linear search.
  *
  * Step through the search space until we find what we are looking for.
  * No order required or expected.
  */
 public class LinearSearch<ComparableSearchTarget extends Comparable<ComparableSearchTarget>> implements Searcher<ComparableSearchTarget> {
-    private ComparableSearchTarget[] searchSpace;
+    private final ComparableSearchTarget[] searchSpace;
 
     public LinearSearch(ComparableSearchTarget[] searchSpace) {
         this.searchSpace = searchSpace;

@@ -15,7 +15,7 @@ import com.rox.struc.Heap;
  *      - It is a heap again
  * 4. Do this until all items are sorted and there's no unsorted heap left
  *
- * @Author Ross W. Drew
+ * @author Ross W. Drew
  */
 public class HeapSort implements Sorter {
     public Comparable[] sort(Comparable[] list) {

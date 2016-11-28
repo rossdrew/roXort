@@ -10,11 +10,11 @@ package com.rox.sort;
  * 1. Move through the array (0..n) and bubble, leaving a sorted
  *    number at the end.
  * 2. Start over and move through skipping the sorted/bubbled at
- *    the end (0..n-1), leaving two sorte numbers at the end.
+ *    the end (0..n-1), leaving two sorted numbers at the end.
  * 3. Continue till all numbers are sorted or no switches happen on
  *    a pass
  *
- * @Author Ross W. Drew
+ * @author Ross W. Drew
  */
 public class BubbleSort implements Sorter {
     public Comparable[] sort(Comparable[] list) {

@@ -11,7 +11,7 @@ package com.rox.encrypt;
  *
  *  This is symmetrical. So the key will also decrypt in the exact same way as it encrypts.
  *
- * @Author rossdrew
+ * @author rossdrew
  */
 public class XOREncryptor {
     private char[] key = new char [0];

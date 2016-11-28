@@ -3,7 +3,7 @@ package com.rox.struc;
 /**
  * Array based heap structure
  *
- * @Author Ross W. Drew
+ * @author Ross W. Drew
  */
 public class Heap {
     private Comparable[] heap;

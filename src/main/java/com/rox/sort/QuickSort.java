@@ -23,7 +23,7 @@ package com.rox.sort;
 public class QuickSort implements Sorter {
     public enum PivotSelection {LAST_ITEM}
 
-    private PivotSelection pivotSelection = PivotSelection.LAST_ITEM;
+    private final PivotSelection pivotSelection = PivotSelection.LAST_ITEM;
 
     public Comparable[] sort(Comparable[] list) {
         quickSort(list);
@@ -94,17 +94,15 @@ public class QuickSort implements Sorter {
         int leftIndex = newList.length-1;
         int rightIndex = 0;
 
-        for (int i=0; i< list.length; i++){
-            if (list[i].compareTo(list[pivot]) >= 0){
-                newList[leftIndex--] = list[i];
-            }else{
-                newList[rightIndex++] = list[i];
+        for (Comparable aList : list) {
+            if (aList.compareTo(list[pivot]) >= 0) {
+                newList[leftIndex--] = aList;
+            } else {
+                newList[rightIndex++] = aList;
             }
         }
 
-        for (int i=0; i< list.length; i++){
-            list[i] = newList[i];
-        }
+        System.arraycopy(newList, 0, list, 0, list.length);
 
         return rightIndex;
     }
