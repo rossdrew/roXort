@@ -1,9 +1,5 @@
 package com.rox.search;
 
-import com.rox.sort.Sorter;
-
-import java.util.Arrays;
-
 /**
  * (Binary / Half Interval / Logarithmic) Search
  *
@@ -12,23 +8,23 @@ import java.util.Arrays;
  * the first half.
  * This means you can reduce the search space logarithmically.  Decreasing search time drastically.
  *
- * @Author Ross W. Drew
+ * @author Ross W. Drew
  */
-public class BinarySearch implements Searcher{
-    private Comparable[] searchSpace;
+public class BinarySearch<ComparableSearchTarget extends Comparable<ComparableSearchTarget>> implements Searcher<ComparableSearchTarget>{
+    private ComparableSearchTarget[] searchSpace;
 
-    public BinarySearch(Comparable[] sortedItems){
+    public BinarySearch(ComparableSearchTarget[] sortedItems){
         searchSpace = sortedItems;
     }
 
-    public int search(Comparable searchTerm){
+    public int search(ComparableSearchTarget searchTerm){
         if (searchSpace.length < 1)
             return -1;
 
         return binarySearch(searchTerm, 0, searchSpace.length - 1);
     }
 
-    private int binarySearch(Comparable searchTerm, int start, int end) {
+    private int binarySearch(ComparableSearchTarget searchTerm, int start, int end) {
         int guess = middleOfRange(start, end);
         int guessResult = searchSpace[guess].compareTo(searchTerm);
 

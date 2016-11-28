@@ -1,9 +1,8 @@
 package com.rox.search;
 
 /**
- * @Author rossdrew
- * @Created 26/09/16.
+ * @author rossdrew
  */
-public interface Searcher {
-    int search(Comparable searchTerm);
+public interface Searcher<ComparableSearchTarget extends Comparable> {
+    int search(ComparableSearchTarget searchTerm);
 }

@@ -8,14 +8,14 @@ package com.rox.search;
  * Step through the search space until we find what we are looking for.
  * No order required or expected.
  */
-public class LinearSearch implements Searcher {
-    private Comparable[] searchSpace;
+public class LinearSearch<ComparableSearchTarget extends Comparable<ComparableSearchTarget>> implements Searcher<ComparableSearchTarget> {
+    private ComparableSearchTarget[] searchSpace;
 
-    public LinearSearch(Comparable[] searchSpace) {
+    public LinearSearch(ComparableSearchTarget[] searchSpace) {
         this.searchSpace = searchSpace;
     }
 
-    public int search(Comparable searchTerm) {
+    public int search(ComparableSearchTarget searchTerm) {
         for (int i = 0; i<searchSpace.length; i++){
             if (searchSpace[i].compareTo(searchTerm) == 0)
                 return i;
