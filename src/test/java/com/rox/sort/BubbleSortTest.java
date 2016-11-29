@@ -19,6 +19,11 @@ public class BubbleSortTest extends SorterTest {
         return sort;
     }
 
+    @Override
+    public boolean isStable() {
+        return false;
+    }
+
     @Test
     public void testStablility(){
         Integer i1 = 43;

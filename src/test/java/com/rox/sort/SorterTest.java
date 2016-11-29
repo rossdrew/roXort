@@ -16,6 +16,7 @@ import static junit.framework.TestCase.fail;
 public abstract class SorterTest {
 
     public abstract Sorter getSorter();
+    public abstract boolean isStable();
 
     @Test
     public void testSortEmptyComparableList(){
@@ -143,6 +144,35 @@ public abstract class SorterTest {
             if (!(expected[i].compareTo(result[i]) == 0)){
                 fail("Item " + i + " was out of expected order");
             }
+        }
+    }
+
+    @Test
+    public void testSimpleStability(){
+        //TODO list of items containing multiples
+        //     sorts need to be generisized so that a sort() will return the same type passed to it and not Comparable[]
+        SortableClass a1 = new SortableClass("Ross", 36);
+        SortableClass a2 = new SortableClass("Drew", 36);
+
+        SortableClass[] list = new SortableClass[] {a1, a2};
+        //SortableClass[] result = getSorter().sort(list);
+    }
+
+    public class SortableClass implements Comparable<SortableClass>{
+        private final Integer age;
+        private final String name;
+
+        public Integer getAge() {
+            return age;
+        }
+
+        public SortableClass(String name, int age) {
+            this.age = age;
+            this.name = name;
+        }
+
+        public int compareTo(SortableClass o) {
+            return age.compareTo(o.getAge());
         }
     }
 }
