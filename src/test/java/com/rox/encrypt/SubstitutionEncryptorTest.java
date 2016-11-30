@@ -24,14 +24,26 @@ public class SubstitutionEncryptorTest {
     }
 
     @Test
-    public void testUnknownAlphabetCharacter(){
+    public void testUnknownAlphabetCharacters(){
         SubstitutionEncryptor encryptor = new SubstitutionEncryptor("ABC", "123");
 
         try {
             encryptor.encrypt("DEF");
-
             fail("Plaintext must be made up of Substitution alphabet");
         }catch(IllegalArgumentException e){
+            //Plaintext ("DEF") contained characters not in the substitution index ("ABC")
+        }
+    }
+
+    @Test
+    public void testCorrectUnknownAlphabetCharacterReported(){
+        SubstitutionEncryptor encryptor = new SubstitutionEncryptor("ABC", "123");
+
+        try {
+            encryptor.encrypt("CDE");
+            fail("Plaintext must be made up of Substitution alphabet");
+        }catch(IllegalArgumentException e){
+            assertTrue(e.getMessage().contains("Unknown character 'D'"));
             //Plaintext ("DEF") contained characters not in the substitution index ("ABC")
         }
     }
