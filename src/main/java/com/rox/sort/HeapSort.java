@@ -5,6 +5,8 @@ import com.rox.struc.Heap;
 /**
  * Heap Sort
  *
+ * Stable: No
+ *
  * Compile a {@link com.rox.struc.Heap Heap} data structure from the items to be sorted
  * then continually use the top item (highest) and resort the heap.
  *

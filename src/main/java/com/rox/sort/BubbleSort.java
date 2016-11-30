@@ -3,6 +3,8 @@ package com.rox.sort;
 /**
  * Bubble Sort
  *
+ * Stable: Yes
+ *
  * Continually move through the array start to finish comparing pairs
  * and swapping them so that the higher number is on the right. The
  * higher number will "bubble" to the end.
@@ -13,6 +15,7 @@ package com.rox.sort;
  *    the end (0..n-1), leaving two sorted numbers at the end.
  * 3. Continue till all numbers are sorted or no switches happen on
  *    a pass
+ *
  *
  * @author Ross W. Drew
  */

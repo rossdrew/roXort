@@ -1,9 +1,12 @@
 package com.rox.sort;
 
+import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.junit.Test;
 import java.util.Arrays;
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.fail;
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assume.assumeThat;
 
 /**
  * Common tests which apply to anything extending the {@link Sorter Sorter} interface.
@@ -148,8 +151,10 @@ public abstract class SorterTest {
     }
 
     @Test
+    @Ignore
     public void testSimpleStability(){
-        //TODO list of items containing multiples
+        assumeThat(isStable(), is(true));
+
         //     sorts need to be generisized so that a sort() will return the same type passed to it and not Comparable[]
         SortableClass a1 = new SortableClass("Ross", 36);
         SortableClass a2 = new SortableClass("Drew", 36);
