@@ -34,6 +34,7 @@ It has since started to expand into searching and encrypting algorithms as well
 #### Next up
 
  - Merge Sort
+ - [Transpositional](https://en.wikipedia.org/wiki/Transposition_cipher) Ciphers and their variants [Rail Fence cipher | Route cipher | Columnar transposition | Double transposition | Myszkowski transposition]
  - [Others](https://en.wikipedia.org/wiki/Sorting_algorithm) and [Others Still](http://sorting.at/)
  - [Hashing](http://interactivepython.org/runestone/static/pythonds/SortSearch/Hashing.html) & Digital searches
  
