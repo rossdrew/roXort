@@ -1,7 +1,7 @@
 package com.rox.encrypt;
 
 /**
- * Transposition Cipher
+ * Caesar Cipher
  *
  * Given a set of available characters from which a plaintext can be made.
  * Substitute any given character in the plaintext for one that is n steps
@@ -9,10 +9,10 @@ package com.rox.encrypt;
  *
  * @author rossdrew
  */
-public class TranspositionEncryptor {
+public class CaesarEncryptor {
     private final char[] alphabet;
 
-    public TranspositionEncryptor(String alphabet) {
+    public CaesarEncryptor(String alphabet) {
         this.alphabet = alphabet.toCharArray();
     }
 
